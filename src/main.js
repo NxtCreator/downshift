@@ -1,23 +1,18 @@
-import './style.css'
-import Phaser from 'phaser'
-import RoomScene from './scenes/RoomScene'
+import Phaser from 'phaser';
+import GameScene from './scenes/GameScene';
+import { GRAVITY } from './config';
+import './style.css';
 
-const config = {
+
+new Phaser.Game({
   type: Phaser.AUTO,
-  width: 960,
-  height: 540,
-  backgroundColor: '#0b1020',
-  parent: 'app',
-
+  parent: 'game',
+  width: 800,
+  height: 450,
+  backgroundColor: '#1a1a2e',
   physics: {
     default: 'arcade',
-    arcade: {
-      gravity: { y: 900 },
-      debug: false,
-    },
+    arcade: { gravity: { y: GRAVITY, fps: 120, overlapBias: 8 } },
   },
-
-  scene: RoomScene,
-}
-
-new Phaser.Game(config)
+  scene: [GameScene],
+});
