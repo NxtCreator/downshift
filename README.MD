@@ -47,7 +47,6 @@ I'm proud of getting it this far, and I'm excited to keep learning.
 ## Credits
 
 - Tiles and props: [Kenney](https://kenney.nl/) — Pixel Platformer Industrial Expansion (CC0)
-- Claude helped me understand concepts, debug problems, and review code throughout development.
 
 ---
 
